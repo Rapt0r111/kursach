@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/css/styles.css" rel="stylesheet">
+    <link href="/static/css/test.css" rel="stylesheet">
+    <script src="/static/js/jquery-3.6.0.min.js"></script>
+    <title>Добавление темы</title>
+    <script src="/static/js/theme-switcher.js"></script>
+    <style>
+        .errorlist {
+            display: inline-block;
+            color: #e35f5f;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body onload="load_checkbox();">
+    <header class="p-3 bg-header">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="/" class="nav-link px-2 text-secondary">Главная страница</a></li>
+                    <li><a href="#" class="nav-link px-2 txt-color-white">FAQs</a></li>
+                    <li><a href="#" class="nav-link px-2 txt-color-white">About</a></li>
+                </ul>
+                <div class="d-flex" style="margin-left: auto;">
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                        <input type="search" class="form-control form-control-dark" placeholder="Search..."
+                            aria-label="Search">
+                    </form>
+                    <div class="text-end d-flex align-items-center">
+
+                        <div class="dropdown">
+                            <a href="/profile"><span class="inline-icon" style="width: 45px; height: 45px;"><img
+                                        style="min-width:45px; min-height:45px; max-width:45px; object-fit: cover; max-height: 45px; border-radius:25px;"
+                                        src="/media/images/avatars/89736115501d4afd4fbd9e35afb88fcf.jpg"></span></a>
+                            <div class="dropdown-content">
+                                <a href="/">#Будущая кнопка#</a>
+                                <a href="/edit/1b44203c-59a9-4bb1-a87a-93b67986c814">Настройки</a>
+                                <a href="/lesson-view">Предметы</a>
+                                <a href="/logout">Выйти</a>
+                                <input class="switch-box" type="checkbox" id="switch" onclick="toggleTheme()" /><label
+                                    class="switch-label i-block" for="switch"></label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <main>
+
+        <div class="wrapper justify-content-center align-items-center">
+            <div class="edit-case">
+                <form method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="csrfmiddlewaretoken"
+                        value="5XufNOBZ8qDq46CxjNN4WPvlfKoo8VrtL8R5YJyekTmWh9xylJI2J6oNytUiIh6K">
+                    <input type="hidden" name="files_set-TOTAL_FORMS" value="0" id="id_files_set-TOTAL_FORMS"><input
+                        type="hidden" name="files_set-INITIAL_FORMS" value="0" id="id_files_set-INITIAL_FORMS"><input
+                        type="hidden" name="files_set-MIN_NUM_FORMS" value="0" id="id_files_set-MIN_NUM_FORMS"><input
+                        type="hidden" name="files_set-MAX_NUM_FORMS" value="1000" id="id_files_set-MAX_NUM_FORMS">
+
+                    <div class="group topic d-flex justify-content-center align-items-center flex-wrap flex-d-column">
+                        <div><label for="id_topic" class="label">Тема</label></div><input type="text" name="topic"
+                            class="ddd" style="padding: 10px 15px;" maxlength="100" required id="id_topic">
+                    </div>
+                    <div class="" id="ingredient-form-list">
+
+                    </div>
+                    <div id="empty-form" class="hidden">
+                        <div style="margin: 15px 0px;">
+                            <div>
+                                <label for="id_files_set-__prefix__-name" class="label">Название файла</label>
+                            </div><input type="text" name="files_set-__prefix__-name" value="Неизвестный"
+                                class="i-block m-width-200 ddd" style="padding: 10px 20px" maxlength="100"
+                                id="id_files_set-__prefix__-name">
+                        </div>
+                        <div style="margin: 15px 0px;"> Фотография
+                            <label for="id_files_set-__prefix__-topic_content" class="custom-file-upload ddd"
+                                style="min-width: 80px; text-align:center;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor"
+                                    class="bi bi-cloud-arrow-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M7.646 10.854a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 9.293V5.5a.5.5 0 0 0-1 0v3.793L6.354 8.146a.5.5 0 1 0-.708.708l2 2z" />
+                                    <path
+                                        d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z" />
+                                </svg>
+                                <input type="file" name="files_set-__prefix__-topic_content"
+                                    id="id_files_set-__prefix__-topic_content"></label>
+                        </div>
+                        <div style="margin: 15px 0px;">
+                            <div>
+                                <label for="id_files_set-__prefix__-file_type" class="label">Тип файла</label>
+                            </div> <select name="files_set-__prefix__-file_type" class="select-class"
+                                id="id_files_set-__prefix__-file_type">
+                                <option value="" selected>Ничего не выбрано</option>
+
+                                <option value="resources/icons/word.ico">Word</option>
+
+                                <option value="resources/icons/pdf.ico">PDF</option>
+
+                                <option value=" ">Другой формат</option>
+
+                            </select>
+                        </div>
+                        <div style="margin: 15px 0px;text-align: right;" class="checkbox-hidden">
+                            <label for="id_files_set-__prefix__-DELETE" style="cursor: pointer; font-weight: 600"
+                                class="label" onclick="delete_row(this)">Удалить</label>
+                            <input type="checkbox" name="files_set-__prefix__-DELETE"
+                                id="id_files_set-__prefix__-DELETE">
+                        </div>
+
+
+                    </div>
+                    <button type="button" id="add-more">Добавить файл</button>
+                    <button type="submit" class="button">Отправить</button>
+
+                </form>
+            </div>
+
+        </div>
+        <script src="/static/js/inlines.js"></script>
+    </main>
+</body>
+
+</html>

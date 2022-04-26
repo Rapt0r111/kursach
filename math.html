@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/css/styles.css" rel="stylesheet">
+    <link href="/static/css/test.css" rel="stylesheet">
+    <script src="/static/js/jquery-3.6.0.min.js"></script>
+    <title>Математика</title>
+    <script src="/static/js/theme-switcher.js"></script>
+
+</head>
+
+<body onload="load_checkbox();">
+    <header class="p-3 bg-header">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="/" class="nav-link px-2 text-secondary">Главная страница</a></li>
+                    <li><a href="#" class="nav-link px-2 txt-color-white">FAQs</a></li>
+                    <li><a href="#" class="nav-link px-2 txt-color-white">About</a></li>
+                </ul>
+                <div class="d-flex" style="margin-left: auto;">
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                        <input type="search" class="form-control form-control-dark" placeholder="Search..."
+                            aria-label="Search">
+                    </form>
+                    <div class="text-end d-flex align-items-center">
+
+                        <div class="dropdown">
+                            <a href="/profile"><span class="inline-icon" style="width: 45px; height: 45px;"><img
+                                        style="min-width:45px; min-height:45px; max-width:45px; object-fit: cover; max-height: 45px; border-radius:25px;"
+                                        src="/media/images/avatars/89736115501d4afd4fbd9e35afb88fcf.jpg"></span></a>
+                            <div class="dropdown-content">
+                                <a href="/">--Хз че сюда--</a>
+                                <a href="/edit/1b44203c-59a9-4bb1-a87a-93b67986c814">Настройки</a>
+                                <a href="/lesson-view">Предметы</a>
+                                <a href="/logout">Выйти</a>
+                                <input class="switch-box" type="checkbox" id="switch" onclick="toggleTheme()" /><label
+                                    class="switch-label i-block" for="switch"></label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-cont">
+        <div class="courses-container">
+
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/css/styles.css" rel="stylesheet">
+    <link href="/static/css/test.css" rel="stylesheet">
+    <script src="/static/js/jquery-3.6.0.min.js"></script>
+    <title>Ваши предметы</title>
+    <script src="/static/js/theme-switcher.js"></script>
+
+</head>
+
+<body onload="load_checkbox();">
+    <header class="p-3 bg-header">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="/" class="nav-link px-2 text-secondary">Главная страница</a></li>
+                    <li><a href="#" class="nav-link px-2 txt-color-white">FAQs</a></li>
+                    <li><a href="#" class="nav-link px-2 txt-color-white">About</a></li>
+                </ul>
+                <div class="d-flex" style="margin-left: auto;">
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                        <input type="search" class="form-control form-control-dark" placeholder="Search..."
+                            aria-label="Search">
+                    </form>
+                    <div class="text-end d-flex align-items-center">
+
+                        <div class="dropdown">
+                            <a href="/profile"><span class="inline-icon" style="width: 45px; height: 45px;"><img
+                                        style="min-width:45px; min-height:45px; max-width:45px; object-fit: cover; max-height: 45px; border-radius:25px;"
+                                        src="/media/images/avatars/89736115501d4afd4fbd9e35afb88fcf.jpg"></span></a>
+                            <div class="dropdown-content">
+                                <a href="/">#Будущая кнопка#</a>
+                                <a href="/edit/1b44203c-59a9-4bb1-a87a-93b67986c814">Настройки</a>
+                                <a href="/lesson-view">Предметы</a>
+                                <a href="/logout">Выйти</a>
+                                <input class="switch-box" type="checkbox" id="switch" onclick="toggleTheme()" /><label
+                                    class="switch-label i-block" for="switch"></label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <a href="/lesson-create.html">
+            <div class="les-create d-flex justify-content-center align-items-center"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                    class="bi bi-plus-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path
+                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                </svg></div>
+        </a>
+        <div class="wrapper justify-content-center align-items-center flex-d-column">
+
+
+            <a href="/lessons/anglijskij-yazyik-ib-2" style="margin-top: 20px;">
+                <div class="card">
+                    <div class="card__image-container">
+
+                        <img class="card__image" src="/media/images/lessons/296c2fe4da614d5f6887d4b6f4c6c9c7.jpg"
+                            alt="">
+
+                    </div>
+                    <svg class="card__svg" viewBox="0 0 800 500">
+                        <path class="path_line"
+                            d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500"
+                            stroke="transparent" fill="#222" />
+                        <path class="card__line"
+                            d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400"
+                            stroke="pink" stroke-width="3" fill="transparent" />
+                    </svg>
+                    <div class="card__header">
+                        <h4>Английский язык</h4>
+                        <h5>ИБ-2</h5>
+                    </div>
+                </div>
+                <a href="/topic-create.html" class="clear-link txt-chg-color"
+                    style="font-weight: 700">Создать тему</a>
+            </a>
+
+
+            <a href="/lessons/matematika-ib-2" style="margin-top: 20px;">
+                <div class="card">
+                    <div class="card__image-container">
+
+                        <img class="card__image" src="/media/images/lessons/dfcc91d72d667cb592b218686fc8f74e.jpg"
+                            alt="">
+
+                    </div>
+                    <svg class="card__svg" viewBox="0 0 800 500">
+                        <path class="path_line"
+                            d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500"
+                            stroke="transparent" fill="#222" />
+                        <path class="card__line"
+                            d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400"
+                            stroke="pink" stroke-width="3" fill="transparent" />
+                    </svg>
+                    <div class="card__header">
+                        <h4>Математика</h4>
+                        <h5>ИБ-2</h5>
+                    </div>
+                </div>
+                <a href="/topic-create.html" class="clear-link txt-chg-color"
+                    style="font-weight: 700">Создать тему</a>
+            </a>
+
+
+            <a href="/lessons/matematika-obyavlyaet-bombardirovkufyivfyivfyivfyivfyivf-ib-2" style="margin-top: 20px;">
+                <div class="card">
+                    <div class="card__image-container">
+
+                        <img class="card__image" src="/media/images/lessons/1049d649d7908fdab4205dfd18f95410.jpg"
+                            alt="">
+
+                    </div>
+                    <svg class="card__svg" viewBox="0 0 800 500">
+                        <path class="path_line"
+                            d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500"
+                            stroke="transparent" fill="#222" />
+                        <path class="card__line"
+                            d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400"
+                            stroke="pink" stroke-width="3" fill="transparent" />
+                    </svg>
+                    <div class="card__header">
+                        <h4>Математика объявляет бом…</h4>
+                        <h5>ИБ-2</h5>
+                    </div>
+                </div>
+                <a href="/topic-create.html"
+                    class="clear-link txt-chg-color" style="font-weight: 700">Создать тему</a>
+            </a>
+
+
+            <a href="/lessons/tazhiskij-yazyik-ib-2" style="margin-top: 20px;">
+                <div class="card">
+                    <div class="card__image-container">
+
+                        <img class="card__image" src="/media/images/lessons/9db48ac716b5eba8e170b07ba2348547.jpg"
+                            alt="">
+
+                    </div>
+                    <svg class="card__svg" viewBox="0 0 800 500">
+                        <path class="path_line"
+                            d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500"
+                            stroke="transparent" fill="#222" />
+                        <path class="card__line"
+                            d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400"
+                            stroke="pink" stroke-width="3" fill="transparent" />
+                    </svg>
+                    <div class="card__header">
+                        <h4>Тажиский язык</h4>
+                        <h5>ИБ-2</h5>
+                    </div>
+                </div>
+                <a href="/topic-create.html" class="clear-link txt-chg-color"
+                    style="font-weight: 700">Создать тему</a>
+            </a>
+
+
+        </div>
+    </main>
+</body>
+
+</html>

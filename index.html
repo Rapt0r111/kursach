@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/static/css/styles.css" rel="stylesheet">
+  <link href="/static/css/test.css" rel="stylesheet">
+  <script src="/static/js/jquery-3.6.0.min.js"></script>
+  <title>Главная страница</title>
+  <script src="/static/js/theme-switcher.js"></script>
+
+</head>
+
+<body onload="load_checkbox();">
+  <header class="p-3 bg-header">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="/" class="nav-link px-2 text-secondary">Главная страница</a></li>
+          <li><a href="#" class="nav-link px-2 txt-color-white" >FAQs</a></li>
+          <li><a href="404.html" class="nav-link px-2 txt-color-white" >Страница 404</a></li>
+        </ul>
+        <div class="d-flex" style="margin-left: auto;">
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+          </form>
+          <div class="text-end d-flex align-items-center">
+
+            <div class="dropdown">
+              <a href="/profile.html"><span class="inline-icon" style="width: 45px; height: 45px;"><img
+                    style="min-width:45px; min-height:45px; max-width:45px; object-fit: cover; max-height: 45px; border-radius:25px;"
+                    src="/media/images/avatars/89736115501d4afd4fbd9e35afb88fcf.jpg"></span></a>
+              <div class="dropdown-content">
+                <a href="/" >#Будущая кнопка#</a>
+                <a href="/profile-edit.html">Настройки</a>
+                <a href="/lesson-view.html">Предметы</a>
+                <a href="#" onClick=NotWirking()>Выйти</a>
+                <input class="switch-box" type="checkbox" id="switch" onclick="toggleTheme()" /><label
+                  class="switch-label i-block" for="switch"></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-cont">
+    <div class="card__container" id="card_cont">
+
+
+      <a href="english.html" style="margin: 20px;">
+        <div class="card">
+          <div class="card__image-container">
+
+            <img class="card__image" src="/media/images/lessons/296c2fe4da614d5f6887d4b6f4c6c9c7.jpg" alt="">
+
+          </div>
+          <svg class="card__svg" viewBox="0 0 800 500">
+            <path class="path_line"
+              d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500"
+              stroke="transparent" fill="#222" />
+            <path class="card__line"
+              d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink"
+              stroke-width="3" fill="transparent" />
+          </svg>
+          <h3 class="card__header">Английский язык</h3>
+        </div>
+      </a>
+
+      <a href="math.html" style="margin: 20px;">
+        <div class="card">
+          <div class="card__image-container">
+
+            <img class="card__image" src="/media/images/lessons/dfcc91d72d667cb592b218686fc8f74e.jpg" alt="">
+
+          </div>
+          <svg class="card__svg" viewBox="0 0 800 500">
+            <path class="path_line"
+              d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500"
+              stroke="transparent" fill="#222" />
+            <path class="card__line"
+              d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink"
+              stroke-width="3" fill="transparent" />
+          </svg>
+          <h3 class="card__header">Математика</h3>
+        </div>
+      </a>
+
+      <a href="ter-math.html" style="margin: 20px;">
+        <div class="card">
+          <div class="card__image-container">
+
+            <img class="card__image" src="/media/images/lessons/1049d649d7908fdab4205dfd18f95410.jpg" alt="">
+
+          </div>
+          <svg class="card__svg" viewBox="0 0 800 500">
+            <path class="path_line"
+              d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500"
+              stroke="transparent" fill="#222" />
+            <path class="card__line"
+              d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink"
+              stroke-width="3" fill="transparent" />
+          </svg>
+          <h3 class="card__header">Математика объявляет бомбардировкуфывфывфывфывфывф</h3>
+        </div>
+      </a>
+
+      <a href="fake-l.html" style="margin: 20px;">
+        <div class="card">
+          <div class="card__image-container">
+
+            <img class="card__image" src="/media/images/lessons/9db48ac716b5eba8e170b07ba2348547.jpg" alt="">
+
+          </div>
+          <svg class="card__svg" viewBox="0 0 800 500">
+            <path class="path_line"
+              d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500"
+              stroke="transparent" fill="#222" />
+            <path class="card__line"
+              d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink"
+              stroke-width="3" fill="transparent" />
+          </svg>
+          <h3 class="card__header">Тажиский язык</h3>
+        </div>
+      </a>
+    </div>
+  </main>
+  <script>
+    function NotWirking(){
+    alert('Данная кнопка здесь не работает')}
+  </script>
+</body>
+
+</html>
